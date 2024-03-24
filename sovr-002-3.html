@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>sovr-002-3</title>
+   <link href="https://videojs-vr.netlify.app/node_modules/video.js/dist/video-js.css" rel="stylesheet">
+   <link href="https://videojs-vr.netlify.app/dist/videojs-vr.css" rel="stylesheet">
+</head>
+<body>
+  <video width="640" height="300" id="videojs-vr-player" class="video-js vjs-default-skin" controls playsinline>
+    <source src="sovr-002/sovr-002-3.mp4" type="video/mp4">
+  </video>
+  <ul>
+    <li><a href="index.html">return to index page</a></li>
+  </ul>
+  <script src="https://videojs-vr.netlify.app/node_modules/video.js/dist/video.js"></script>
+  <script src="https://videojs-vr.netlify.app/dist/videojs-vr.js"></script>
+  <script>
+    (function(window, videojs) {
+      var player = window.player = videojs('videojs-vr-player');
+      player.mediainfo = player.mediainfo || {};
+      player.mediainfo.projection = '180';
+
+      var vr = window.vr = player.vr({projection: '180', debug: true, forceCardboard: false});
+    }(window, window.videojs));
+  </script>
+</body>
+</html>
